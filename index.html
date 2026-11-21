@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketwise | Grocery comparison</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.mjs"></script>
+</head>
+<body>
+<header><a href="./" class="brand">Basketwise<span>.</span></a><span class="badge">Sample prices</span></header>
+<main>
+<section class="hero">
+<div><p class="eyebrow">GROCERY PRICE COMPARISON</p>
+<h1>Find the best shop<br>for your basket.</h1>
+<p>Enter your grocery list to compare basket totals, product ratings and availability across stores.</p></div>
+</section>
+<section class="workspace" aria-label="Grocery comparison">
+<form id="basket">
+<h2>Your grocery list</h2>
+<label for="market">Shopping market</label>
+<select id="market"><option value="IN">India · INR</option><option value="US">United States · USD</option></select>
+<label for="items">Items</label>
+<textarea id="items" rows="7" maxlength="2000" required placeholder="Milk&#10;2 x eggs&#10;Rice"></textarea>
+<p class="hint">Separate items with commas or new lines. Use “2 x milk” for two packs.</p>
+<div class="actions"><button type="submit">Compare stores</button><button type="button" id="sample" class="secondary">Use sample list</button></div>
+</form>
+<section id="results" class="results" aria-labelledby="results-title">
+<h2 id="results-title">Store comparison</h2>
+<p id="status" role="status">Add groceries or try the sample list to see your comparison.</p>
+<div id="cards"></div>
+</section>
+</section>
+</main>
+<footer>Basketwise · Demo prices, ratings, stock and delivery fees are illustrative.</footer>
+</body>
+</html>
